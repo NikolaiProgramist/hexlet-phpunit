@@ -1,0 +1,45 @@
+{
+  "name": "hexlet/php-package",
+  "bin": ["bin/php-package"],
+  "type": "library",
+  "authors": [
+    {
+      "name": "Kirill Mokevnin",
+      "email": "mokevnin@gmail.com"
+    }
+  ],
+  "description": "hexlet php-package",
+  "license": "MIT",
+  "scripts": {
+    "test": "phpunit tests"
+  },
+  "autoload": {
+    "psr-4": {
+      "Php\\Package\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Php\\Package\\Tests\\": "tests"
+    }
+  },
+  "require": {
+    "illuminate/collections": "^11.0",
+    "nesbot/carbon": "^3.0",
+    "symfony/string": "^7.0",
+    "phpstan/phpstan": "^1.10"
+  },
+  "require-dev": {
+    "psy/psysh": "@stable",
+    "phpstan/phpstan-phpunit": "^1.3",
+    "phpstan/extension-installer": "^1.3",
+    "symfony/var-dumper": "^7.0",
+    "phpunit/phpunit": "^11.0",
+    "squizlabs/php_codesniffer": "*"
+  },
+  "config": {
+    "allow-plugins": {
+      "phpstan/extension-installer": true
+    }
+  }
+}
